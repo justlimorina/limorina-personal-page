@@ -194,7 +194,7 @@ body {
     }
     .box-text {
         font-size: 1.08rem;
-        text-align: center;
+        text-align: left;
     }
     body {
         padding: 10px;
