@@ -191,7 +191,6 @@ body {
     }
     .box-image, .box-image img {
         max-width: 85vw;
-        max-height: 40vw;
     }
     .box-text {
         font-size: 1.08rem;
