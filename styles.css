@@ -1,3 +1,22 @@
+/* Material Design 3 (Material You) Color System - Tím */
+:root {
+    --md3-primary: #6750A4;
+    --md3-on-primary: #FFFFFF;
+    --md3-primary-container: #EADDFF;
+    --md3-on-primary-container: #21005D;
+    --md3-secondary: #625B71;
+    --md3-on-secondary: #FFFFFF;
+    --md3-secondary-container: #E8DEF8;
+    --md3-on-secondary-container: #1D192B;
+    --md3-background: #FFFBFE;
+    --md3-surface: #FFFBFE;
+    --md3-surface-variant: #E7E0EC;
+    --md3-on-surface: #1C1B1F;
+    --md3-outline: #79747E;
+    --md3-error: #B3261E;
+    --md3-on-error: #FFFFFF;
+}
+
 @font-face {
     font-family: 'Segoe UI Variable Static Display';
     src: url("font/Segoe UI Variable Display/Segoe-UI-Variable-Static-Display.ttf") format('truetype'), local('Segoe UI Variable Display'), local('Segoe UI Variable');
@@ -9,17 +28,18 @@ body {
     font-family: 'Segoe UI Variable Static Display', sans-serif;
     margin: 0;
     padding: 30px;
-    background-color: #bfbbee;
+    background-color: var(--md3-background);
+    color: var(--md3-on-surface);
 }
 
 .topnav {
     overflow: hidden;
-    background-color: #202134;
+    background-color: var(--md3-primary);
     padding: 14px 16px;
 }
 
 .topnav a {
-    color: white;
+    color: var(--md3-on-primary);
     text-decoration: none;
     font-size: 17px;
 }
@@ -34,7 +54,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #586796;
+    background-color: var(--md3-secondary);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px;
@@ -44,20 +64,21 @@ body {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 15px;
-    color: white;
+    color: var(--md3-on-secondary);
     display: block;
     transition: 0.3s;
 }
 
 .sidebar a:hover {
-    background-color: #202134;
+    background-color: var(--md3-primary);
+    color: var(--md3-on-primary);
 }
 
 .sidebar .closebtn {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 15px;
-    color: white;
+    color: var(--md3-on-secondary);
     display: block;
     transition: 0.3s;
 }
@@ -68,85 +89,78 @@ body {
     justify-content: space-between;
 }
 
-.box {
-    color: white;
-    width: 49.7%;
-    background-color:#7F64AD;
-      border-style: none;
-      border-width: 0.5px;
-     margin-top: 5px;
+.box, .box-large {
+    color: var(--md3-on-primary-container);
+    background-color: var(--md3-primary-container);
+    border-style: none;
+    border-width: 0.5px;
+    margin-top: 5px;
     margin-bottom: 5px;
     box-sizing: border-box;
-      transition: 0.3s ease;
-      padding: 20px;
-  }
-  
-.box:hover {
-      border-style: none;
-      color: white;
-      background-color: #714C64;
-      transition: 0.3s ease;
-  }
-  
-.box img {
-      float: right;
-      max-width: 200px;
-      max-height: 200px;
-      margin-right: 10px;
-      align-items: center;
-      padding: 10px;
-      opacity: 1.0;
-  }
-
-.box-large{
-    color: white;
-    width: 100%;
-    background-color:#7F64AD;
-      border-style: none;
-      border-width: 0.5px;
-/*       margin-top: 10px;
-    margin-bottom: 10px; */
-    box-sizing: border-box;
-      transition: 0.3s ease;
-      padding: 20px;
+    transition: 0.3s ease;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    width: 49.7%;
+    min-height: 220px;
 }
 
-.box-large:hover {
-    border-style: none;
-    color: white;
-    background-color: #714C64;
+.box-large {
+    width: 100%;
+}
+
+.box:hover, .box-large:hover {
+    background-color: var(--md3-secondary-container);
+    color: var(--md3-on-secondary-container);
     transition: 0.3s ease;
 }
 
-.box-large img {
-    float: right;
-    max-width: 200px;
-    max-height: 200px;
-    margin-right: 10px;
+.box-content {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 10px;
-    opacity: 1.0;
+    width: 100%;
+    padding: 20px;
+    gap: 18px;
+    justify-content: space-between;
+    min-height: 200px;
 }
 
-@media (max-width: 768px) {
-    .box {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    body {
-        padding: 10px;
-    }
-    .box img,
-    .box-large img {
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
+.box-text {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    word-break: break-word;
+    font-size: 1rem;
+    color: var(--md3-on-primary-container);
+}
+
+.box-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    max-width: 250px;
+}
+
+.box-image img {
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(103,80,164,0.08); /* md3 primary 10% opacity */
+    box-shadow: 0 2px 8px rgba(103, 80, 164, 0.08);
 }
 
 .box-header {
-    background-color: #202134;
-    color: white;
+    background-color: var(--md3-primary);
+    color: var(--md3-on-primary);
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -155,22 +169,54 @@ body {
     font-size: 30px;
 }
 
+/* Responsive for mobile */
+@media (max-width: 900px) {
+    .box-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .box, .box-large {
+        width: 100%;
+        min-height: unset;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .box-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 18px 8px;
+        min-height: unset;
+    }
+    .box-image, .box-image img {
+        max-width: 85vw;
+        max-height: 40vw;
+    }
+    .box-text {
+        font-size: 1.08rem;
+        text-align: center;
+    }
+    body {
+        padding: 10px;
+    }
+}
+
 img {
     margin: 0 auto;
     max-width: 100%;
-/*     margin-bottom: 5px; */
 }
 
 .footer {
-  text-align: center;
-  font-size: 13px;
-  font-family: 'Segoe UI Variable Static Display', sans-serif;
-  background-color: #202134;
-  color: white;
-  padding: 1px;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Segoe UI Variable Static Display', sans-serif;
+    background-color: var(--md3-primary);
+    color: var(--md3-on-primary);
+    padding: 1px;
 }
 
 .footer-link {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: var(--md3-primary);
 }
