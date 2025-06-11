@@ -1,18 +1,18 @@
 /* Material Design 3 (Material You) Color System - Tím */
 :root {
-    --md3-primary: #6750A4;
+    --md3-primary: #463B7B;
     --md3-on-primary: #FFFFFF;
-    --md3-primary-container: #EADDFF;
-    --md3-on-primary-container: #21005D;
-    --md3-secondary: #625B71;
+    --md3-primary-container: #DAD7F1;
+    --md3-on-primary-container: #251B47;
+    --md3-secondary: #5C51A1;
     --md3-on-secondary: #FFFFFF;
-    --md3-secondary-container: #E8DEF8;
-    --md3-on-secondary-container: #1D192B;
-    --md3-background: #FFFBFE;
-    --md3-surface: #FFFBFE;
-    --md3-surface-variant: #E7E0EC;
-    --md3-on-surface: #1C1B1F;
-    --md3-outline: #79747E;
+    --md3-secondary-container: #E3E1F7;
+    --md3-on-secondary-container: #231846;
+    --md3-background: #F5F4FA;
+    --md3-surface: #FFFFFF;
+    --md3-surface-variant: #E6E4F0;
+    --md3-on-surface: #1F1836;
+    --md3-outline: #9A94B6;
     --md3-error: #B3261E;
     --md3-on-error: #FFFFFF;
 }
