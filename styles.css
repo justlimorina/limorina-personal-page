@@ -179,7 +179,7 @@ body {
         width: 100%;
         min-height: unset;
         margin-bottom: 10px;
-        padding: 0;
+        padding: 10;
     }
     .box-content {
         flex-direction: column;
