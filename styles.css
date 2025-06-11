@@ -136,6 +136,12 @@ body {
     body {
         padding: 10px;
     }
+    .box img,
+    .box-large img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .box-header {
