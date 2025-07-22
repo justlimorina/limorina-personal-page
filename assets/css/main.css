@@ -89,7 +89,7 @@ body{
 .caption {
     position: absolute;
     left: 6vw;
-    bottom: 12.5vw;
+    bottom: 4vw;
     color: #fff;
     font-size: 2.2rem;
     font-family: 'Adwaita Sans', sans-serif;
@@ -100,6 +100,12 @@ body{
     line-height: 1.2;
     animation: fadeInUp 1.2s;
 }
+
+.textline::after{
+        font-size: 35px;
+        padding: 0px;
+        content: "Lone voyagers in the cosmos are driven by two desires — to tread in the trails of the past and to forge their own way. But under THEIR scrutiny... most end up adhering to the former."
+    }
 
 .sidebar {
   height: 100%;
@@ -282,7 +288,12 @@ img {
 /*MOBILE RESPONSIVE*/
 
 @media (max-width: 900px) {
-    containers {
+    .textline::after{
+        font-size: 35px;
+        padding: 0px;
+        content: "Welcome to Limorina's Personal Page"
+    }
+    .containers {
         flex-direction: column;
         gap: 16px;
     }
