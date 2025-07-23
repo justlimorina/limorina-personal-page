@@ -101,6 +101,12 @@ body{
     animation: fadeInUp 1.2s;
 }
 
+.pretextline::before{
+    font-size: 16px;
+    padding: 0px;
+    content: "Acheron";
+}
+
 .textline::after{
         font-size: 35px;
         padding: 0px;
@@ -207,6 +213,10 @@ img {
     width: 100%;
 }
 
+.box:hover, .box-large:hover{
+    background-color: #E3E1F7;
+}
+
 .box-content {
     display: flex;
     flex-direction: row;
@@ -292,6 +302,11 @@ img {
         font-size: 35px;
         padding: 0px;
         content: "Welcome to Limorina's Personal Page"
+    }
+    .pretextline::before{
+        font-size: 35px;
+        padding: 0px;
+        content: ""
     }
     .containers {
         flex-direction: column;
