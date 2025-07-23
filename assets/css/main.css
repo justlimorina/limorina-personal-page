@@ -312,7 +312,7 @@ img {
         min-height: unset;
     }
     .box-image, .box-image img {
-        max-width: 85vw;
+        width: 85vw;
     }
     .box-text {
         font-size: 16px;
