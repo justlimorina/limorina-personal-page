@@ -75,6 +75,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   margin: 5px 0 2.5px 0;
+filter: brightness(70%);
 }
 
 .img-header-holder {
